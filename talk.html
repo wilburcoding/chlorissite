@@ -65,7 +65,7 @@
           </div>  
         </div>
         `)
-      fetch("http://localhost:3005/chat", {
+      fetch("https://chlserver.wilburcoding.hackclub.app/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -85,7 +85,7 @@
     let lastcheck = Date.now();
     
     setInterval(function () {
-      fetch("http://localhost:3005/chat")
+      fetch("https://chlserver.wilburcoding.hackclub.app/chat")
         .then(response => response.json())
         .then(json => {
           for (var item of json) {
